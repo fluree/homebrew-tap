@@ -1,23 +1,27 @@
 class FlureeBeta < Formula
   desc "Command-line interface for Fluree DB (including pre-releases)"
   homepage "https://flur.ee"
-  version "5.0.0-alpha.1"
+  version "5.0.0-alpha.2"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.1/fluree-db-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "acd3b747176848048a62025310c515d5c096f1a45615e56c8d1c21084c9ecb5a"
+    url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.2/fluree-db-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "665051298b0d654045c9d0dd6f89aa05886ba9b684f9cea56c059c79f1483291"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.1/fluree-db-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "56edcb69670287818cde9aec60d565436c45bf362b86e8cb449e4beb7211a0fc"
+      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.2/fluree-db-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "19674bb723d0bd3b8f1b7503d4f9ddfb93f53b81b04731a5c6f110116cef4ae3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.1/fluree-db-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6359e780bf11876242ea85c449833f934514210795a3abb75fb3fa37bd0bdff2"
+      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.2/fluree-db-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6534cdff837ab09fd734daf9175e4929b5ab2a3a28e9282046a7b582c204a620"
     end
   end
   license "BUSL-1.1"
   keg_only "it installs the same commands as the stable formula"
+
+  on_macos do
+    depends_on macos: :sonoma
+  end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
