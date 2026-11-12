@@ -1,22 +1,26 @@
 class Fluree < Formula
   desc "Command-line interface for Fluree DB"
   homepage "https://flur.ee"
-  version "4.2.5"
+  version "4.2.6"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/fluree/db/releases/download/v4.2.5/fluree-db-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "b6959a2e766423cf6974313a8b3315c19a9459b83cf909b978b6a29d71ac2b63"
+    url "https://github.com/fluree/db/releases/download/v4.2.6/fluree-db-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "30388b58724622fb1ee22433335d6483e5934f9b414a48205d2e80fc3d379a63"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fluree/db/releases/download/v4.2.5/fluree-db-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0458bccba2cafb145f10015203529b002c07038d0ec3474c9064e63ffe0020c8"
+      url "https://github.com/fluree/db/releases/download/v4.2.6/fluree-db-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "400b33776219f6a9469e066159c326f15df9cd0a0e4cd2b2a091ba8b6ae13600"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fluree/db/releases/download/v4.2.5/fluree-db-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a2b509b05a77949ca61cfc4d2fb70ff82609f8910f3e8cada28574503bf1b699"
+      url "https://github.com/fluree/db/releases/download/v4.2.6/fluree-db-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f394e96645838c492e4e3d37ab7cda19bf015946bd0089c5400f98b482b5b439"
     end
   end
   license "BUSL-1.1"
+
+  on_macos do
+    depends_on macos: :sonoma
+  end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
