@@ -1,19 +1,19 @@
 class FlureeBeta < Formula
   desc "Command-line interface for Fluree DB (including pre-releases)"
   homepage "https://flur.ee"
-  version "5.0.0-alpha.3"
+  version "5.0.0-alpha.4"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.3/fluree-db-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "b6199c83ae86b80625c934fedbcb0cf984338b4bf5cb6edff4c24fc26c464b54"
+    url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.4/fluree-db-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "2a22f441177a6d7e9d60ee8427127fa5c120081054de9bb048394e15ba2d9623"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.3/fluree-db-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a2180b3b355eeb1693d9b27ad911a6810de8f6dac78651d05ca0efac8627792c"
+      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.4/fluree-db-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3c4c9e2956138d71544e5427d02beb542d03b95cf9692b70ea8ab61b91d40228"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.3/fluree-db-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fcdc0ff852d009df8eca4c3a6de1f079004fdc6ac452b219876128377418af53"
+      url "https://github.com/fluree/db/releases/download/v5.0.0-alpha.4/fluree-db-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b88f782e992c321a1bf5e6aaccedaa65274b9df1a91a1ed61f218189380be155"
     end
   end
   license "BUSL-1.1"
